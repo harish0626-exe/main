@@ -1,0 +1,411 @@
+/* ===== Global Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #f3f6fa;
+  color: #1f2937;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+/* ===== Headings ===== */
+h1, h2, h3 {
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+/* ===== General Containers ===== */
+.auth-container,
+.form-container,
+.credentials-container,
+.profile-container {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  width: 100%;
+  max-width: 650px;
+  border-radius: 0.8rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  animation: fadeIn 0.6s ease;
+}
+
+.profile-container {
+  max-width: 900px;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ===== Forms ===== */
+.form,
+.long-form {
+  margin-top: 1rem;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #cbd5e1;
+  background: #f9fafb;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s ease;
+}
+
+.btn.primary {
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+}
+.btn.primary:hover {
+  background: #1e40af;
+}
+
+.btn.secondary {
+  background: #f1f5f9;
+  color: #374151;
+  border: 1px solid #d1d5db;
+}
+/* ===== General Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #e9f1fb, #f9fbff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #222;
+}
+
+/* ===== Card / Container Styles ===== */
+.auth-container, .form-container, .profile-container {
+  width: 100%;
+  max-width: 480px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.1);
+}
+
+.title, .form-title {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+  color: #0055aa;
+  margin-bottom: 25px;
+}
+
+/* ===== Form Inputs ===== */
+form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 500;
+  color: #333;
+}
+
+form input, 
+form textarea, 
+form select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border 0.3s ease;
+}
+
+form input:focus, 
+form textarea:focus, 
+form select:focus {
+  border-color: #0055aa;
+  outline: none;
+  box-shadow: 0 0 4px rgba(0,85,170,0.3);
+}
+
+/* ===== Section Titles ===== */
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #003366;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #0055aa;
+  padding-bottom: 4px;
+}
+
+/* ===== Radio & Checkbox Groups ===== */
+.radio-group, .checkbox-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.radio-group label, 
+.checkbox-group label {
+  font-size: 14px;
+  color: #444;
+}
+
+/* ===== Buttons ===== */
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn.primary {
+  background: #0055aa;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #003f7d;
+}
+
+.btn.secondary {
+  background: #eee;
+  color: #333;
+}
+
+.btn.secondary:hover {
+  background: #ddd;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* ===== Links ===== */
+.signup-link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: #0055aa;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Divider ===== */
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  color: #888;
+  font-size: 14px;
+}
+
+
+.divider::before, 
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #ccc;
+  margin: 0 10px;
+}
+
+/* ===== Social Login Buttons ===== */
+.social-login {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.btn.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.btn.social i {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.btn.social.google {
+  background: #db4437;
+  color: #fff;
+}
+
+.btn.social.google:hover {
+  background: #b0362a;
+}
+
+.btn.social.apple {
+  background: #000;
+  color: #fff;
+}
+
+.btn.social.apple:hover {
+  background: #333;
+}
+
+.btn.social.phone {
+  background: #34a853;
+  color: #fff;
+}
+
+.btn.social.phone:hover {
+  background: #2b8642;
+}
+
+/* ===== Insurance Status ===== */
+.status-text {
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+/* ===== Profile Page ===== */
+.profile-container h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0055aa;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.profile-field {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  background: #f5f9ff;
+  border-radius: 6px;
+}
+
+.profile-field label {
+  font-weight: 600;
+  color: #374151;
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+
+.radio-group,
+.checkbox-group {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.radio-group label,
+.checkbox-group label {
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Form actions */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* ===== Profile Page ===== */
+.profile-details {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  row-gap: 0.8rem;
+  column-gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.profile-details label {
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.profile-details div {
+  color: #374151;
+  background: #f9fafb;
+  padding: 0.5rem 0.8rem;
+  border-radius: 0.4rem;
+  border: 1px solid #e5e7eb;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.back-link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.back-link a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}
+

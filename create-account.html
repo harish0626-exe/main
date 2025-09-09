@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MigrantCare+ | Create Account</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h1 class="form-title">MigrantCare+ Registration</h1>
+
+    <form id="createAccountForm" action="member-id.html" method="POST">
+      
+      <!-- Personal Details -->
+      <h2 class="section-title">Personal Details</h2>
+      <label>Full Name</label>
+      <input type="text" name="fullname" required>
+
+      <label>Age</label>
+      <input type="number" name="age" required>
+
+      <label>Date of Birth</label>
+      <input type="date" name="dob" required>
+
+      <label>Gender</label>
+      <div class="radio-group">
+        <label><input type="radio" name="gender" value="Male" required> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+        <label><input type="radio" name="gender" value="Other"> Other</label>
+      </div>
+
+      <label class="section-title">Marital Status</label>
+<div class="radio-group">
+  <label>
+    <input type="radio" name="marital_status" value="married" required> Married
+  </label>
+  <label>
+    <input type="radio" name="marital_status" value="unmarried" required> Unmarried
+  </label>
+</div>
+
+
+      <!-- Contact Details -->
+      <h2 class="section-title">Contact Details</h2>
+      <label>Phone Number</label>
+      <input type="tel" name="phone" required>
+
+      <label>Email ID</label>
+      <input type="email" name="email" required>
+
+      <!-- Family Details -->
+      <h2 class="section-title">Family Details</h2>
+      <label>Father's Name</label>
+      <input type="text" name="father">
+
+      <label>Mother's Name</label>
+      <input type="text" name="mother">
+
+      <label>Father's Contact No.</label>
+      <input type="tel" name="father_phone">
+
+      <label>Mother's Contact No.</label>
+      <input type="tel" name="mother_phone">
+
+      <!-- Identity & Health -->
+      <h2 class="section-title">Identity & Health</h2>
+      <label>Nationality</label>
+      <input type="text" name="nationality">
+
+      <label>Identity Marks</label>
+      <input type="text" name="identity_marks">
+
+      <label>Blood Group</label>
+      <input type="text" name="blood_group">
+
+      <label>Health Issues (if any)</label>
+      <input type="text" name="health_issues">
+
+      <label>Aadhar ID No.</label>
+      <input type="text" name="aadhar">
+
+      <!-- Work & Insurance -->
+      <h2 class="section-title">Work & Insurance</h2>
+      <label>Type of Work</label>
+      <input type="text" name="work_type">
+
+      <label>Work Permit ID</label>
+      <input type="text" name="work_permit">
+
+      <label>Insurance No.</label>
+      <input type="text" name="insurance_no">
+
+      <label>Insurance Validity</label>
+      <input type="date" name="insurance_validity" id="insurance_validity">
+      <p id="insurance_status" class="status-text"></p>
+
+      <label>Permanent Address</label>
+      <textarea name="permanent_address"></textarea>
+
+      <label>Residential Address</label>
+      <textarea name="residential_address"></textarea>
+
+      <label>Office Address</label>
+      <textarea name="office_address"></textarea>
+
+      <!-- Buttons -->
+      <div class="button-group">
+        <button type="submit" class="btn primary">Submit</button>
+        <button type="reset" class="btn secondary">Clear</button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const insuranceInput = document.getElementById("insurance_validity");
+    const statusText = document.getElementById("insurance_status");
+
+    insuranceInput.addEventListener("change", () => {
+      const enteredDate = new Date(insuranceInput.value);
+      const today = new Date();
+      if (enteredDate < today) {
+        statusText.textContent = "⚠️ Insurance Expired";
+        statusText.style.color = "red";
+      } else {
+        statusText.textContent = "✅ Insurance Valid";
+        statusText.style.color = "green";
+      }
+    });
+  </script>
+<div class="back-link">
+  <a href="index.html">← Back to Login</a>
+</div>
+</body>
+</html>
